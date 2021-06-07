@@ -1,0 +1,80 @@
+============================================================
+1. Retrieves the security threats related to data tampering 
+and theft, their vulnerabilities, and assets to protect.
+===========================================================
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX HealthOnt: <https://mmisw.org/ont/~mubashar/HealthOnt#>
+
+SELECT ?Countermeasure ?Vulnerability WHERE {
+    ?Countermeasure rdfs:subClassOf HealthOnt:Countermeasure .
+    ?Countermeasure rdfs:subClassOf  ?Vulnerability .
+    ?Vulnerability owl:onProperty HealthOnt:mitigates .
+    ?Countermeasure HealthOnt:Mitigates ?FilterByThreat .
+    FILTER regex(?FilterByThreat, "^DataTampering|DataTheft") .
+}
+
+============================================================
+2. Retrieves the countermeasures and vulnerabilities that 
+are associated with data tampering and theft.
+============================================================
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX HealthOnt: <https://mmisw.org/ont/~mubashar/HealthOnt#>
+
+SELECT ?Countermeasure ?Vulnerability WHERE {
+    ?Countermeasure rdfs:subClassOf HealthOnt:Countermeasure .
+    ?Countermeasure rdfs:subClassOf  ?Vulnerability .
+    ?Vulnerability owl:onProperty HealthOnt:mitigates .
+    ?Countermeasure HealthOnt:Mitigates ?FilterByThreat .
+    FILTER regex(?FilterByThreat, "^DataTampering|DataTheft") .
+}
+
+============================================================
+3. Retrieves system assets that support business assets.
+============================================================
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX HealthOnt: <https://mmisw.org/ont/~mubashar/HealthOnt#>
+
+SELECT DISTINCT ?System_Asset ?Supports_Business_Asset  WHERE {
+    ?System_Asset rdfs:subClassOf HealthOnt:SystemAsset .
+    ?System_Asset rdfs:subClassOf ?Supports_Business_Asset .
+    ?Supports_Business_Asset owl:onProperty HealthOnt:supports .
+}
+
+
+============================================================
+4. Retrieves the business assets that have security criteria 
+constraints.
+============================================================
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+PREFIX HealthOnt: <https://mmisw.org/ont/~mubashar/HealthOnt#>
+
+SELECT DISTINCT ?Business_Asset ?Constraint  WHERE {
+    ?Business_Asset rdfs:subClassOf HealthOnt:BusinessAsset .
+    ?Business_Asset rdfs:subClassOf ?Constraint .
+    ?Constraint owl:onProperty HealthOnt:hasConstraint .
+    { ?Constraint owl:someValuesFrom HealthOnt:Confidentiality . } 
+    UNION  
+    { ?Constraint owl:someValuesFrom HealthOnt:Integrity . } 
+    UNION  
+    { ?Constraint owl:someValuesFrom HealthOnt:Availability . }
+}
