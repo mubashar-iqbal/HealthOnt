@@ -343,6 +343,20 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ClinicalTrialData -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ClinicalTrialData">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#DataProcessing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ClinicalTrialFraud -->
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ClinicalTrialFraud">
@@ -1469,7 +1483,6 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecord">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#BusinessAsset"/>
-        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#SystemAsset"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#hasConstraint"/>
