@@ -636,19 +636,15 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#targets"/>
-                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#AccessControl"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#targets"/>
-                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#DataAccessRight"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#targets"/>
-                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareSystem"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#AccessControl"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataAccessRight"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareSystem"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>DataTheft</rdfs:label>
