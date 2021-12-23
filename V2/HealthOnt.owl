@@ -11,8 +11,8 @@
     <owl:Ontology rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt">
         <owl:versionIRI rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt/1.0."/>
         <dc:creator xml:lang="ut.ee)">Mubashar Iqbal (mubashar.iqbal@ut.ee) and Raimundas Matulevičius (rma@ut.ee)</dc:creator>
-        <dc:title>Blockchain as a countermeasure solution for security threats of healthcare applications</dc:title>
-        <rdfs:comment>HealthOnt presents the blockchain as a countermeasure solution for security threats of traditional healthcare applications.</rdfs:comment>
+        <dc:title xml:lang="en">Security risks analysis of healthcare applications using blockchain technology</dc:title>
+        <rdfs:comment xml:lang="en">HealthOnt presents the blockchain as a countermeasure solution for security threats of traditional healthcare applications. Also, it presents what security threats can appear in blockchain-based healthcare applications.</rdfs:comment>
         <rdfs:label>HealthOnt</rdfs:label>
         <owl:versionInfo>2.0.0</owl:versionInfo>
     </owl:Ontology>
