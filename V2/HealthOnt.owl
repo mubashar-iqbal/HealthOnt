@@ -36,6 +36,12 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/domain -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/domain"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
@@ -426,6 +432,8 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:domain>BlockchainApplication</dc:domain>
+        <rdfs:label>BlockWithholdingDelay</rdfs:label>
     </owl:Class>
     
 
@@ -560,6 +568,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:domain>TraditionalApplication</dc:domain>
         <rdfs:label>ClinicalTrialFraud</rdfs:label>
     </owl:Class>
     
@@ -700,6 +709,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:domain>TraditionalApplication</dc:domain>
         <rdfs:label>CounterfeitDrugs</rdfs:label>
     </owl:Class>
     
@@ -878,6 +888,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:domain>TraditionalApplication</dc:domain>
         <rdfs:label>DataTampering</rdfs:label>
     </owl:Class>
     
@@ -915,6 +926,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:domain>TraditionalApplication</dc:domain>
         <rdfs:label>DataTheft</rdfs:label>
     </owl:Class>
     
@@ -978,6 +990,8 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Transaction"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:domain>BlockchainApplication</dc:domain>
+        <rdfs:label>DeanonymizationAttack</rdfs:label>
     </owl:Class>
     
 
@@ -1277,6 +1291,8 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:domain>BlockchainApplication</dc:domain>
+        <rdfs:label>DoubleSpending</rdfs:label>
     </owl:Class>
     
 
@@ -1362,6 +1378,8 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:domain>BlockchainApplication</dc:domain>
+        <rdfs:label>EclipseAttack</rdfs:label>
     </owl:Class>
     
 
@@ -1398,6 +1416,8 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:domain>BlockchainApplication</dc:domain>
+        <rdfs:label>EndpointThreat</rdfs:label>
     </owl:Class>
     
 
@@ -2092,6 +2112,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:domain>TraditionalApplication</dc:domain>
         <rdfs:label>InsuranceFraud</rdfs:label>
     </owl:Class>
     
@@ -2339,6 +2360,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:domain>TraditionalApplication</dc:domain>
         <rdfs:label>ManInTheMiddle</rdfs:label>
     </owl:Class>
     
@@ -2457,6 +2479,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:domain>TraditionalApplication</dc:domain>
         <rdfs:label>MedicalRecordsMishandling</rdfs:label>
     </owl:Class>
     
@@ -3254,6 +3277,8 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Cryptography"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:domain>BlockchainApplication</dc:domain>
+        <rdfs:label>QuantumComputingThreat</rdfs:label>
     </owl:Class>
     
 
@@ -3349,6 +3374,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:domain>TraditionalApplication</dc:domain>
         <rdfs:label>Repudiation</rdfs:label>
     </owl:Class>
     
@@ -3462,6 +3488,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:domain>TraditionalApplication</dc:domain>
         <rdfs:label>SinglePointFailure</rdfs:label>
     </owl:Class>
     
@@ -3513,6 +3540,8 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:domain>BlockchainApplication</dc:domain>
+        <rdfs:label>SmartContractsAttack</rdfs:label>
     </owl:Class>
     
 
@@ -3540,6 +3569,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:domain>TraditionalApplication</dc:domain>
         <rdfs:label>SocialEngineering</rdfs:label>
     </owl:Class>
     
@@ -3662,6 +3692,8 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:domain>BlockchainApplication</dc:domain>
+        <rdfs:label>SybilAttack</rdfs:label>
     </owl:Class>
     
 
@@ -3699,6 +3731,8 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:domain>BlockchainApplication</dc:domain>
+        <rdfs:label>SybilBasedDenialOfService</rdfs:label>
     </owl:Class>
     
 
@@ -3791,6 +3825,7 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#IoTDevice"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <dc:domain>TraditionalApplication</dc:domain>
         <rdfs:label>TamperingDeviceSettings</rdfs:label>
     </owl:Class>
     
