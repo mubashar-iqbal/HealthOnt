@@ -1,0 +1,3150 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://mmisw.org/ont/~mubashar/ULRO#"
+     xml:base="https://mmisw.org/ont/~mubashar/ULRO"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ULRO="https://mmisw.org/ont/~mubashar/ULRO#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt">
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mubashar Iqbal (mubashar.iqbal@ut.ee) and Raimundas Matulevičius (rma@ut.ee)</dc:creator>
+        <dc:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Security risk analysis of healthcare applications using blockchain</dc:title>
+        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://creativecommons.org/licenses/by/4.0</terms:license>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HealthOnt presents the blockchain as a countermeasure solution for security threats of traditional healthcare applications. Also, it presents what security threats can appear in blockchain-based healthcare applications.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Healthcare Security Ontology (HealthOnt)</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This annotation property defines who created this ontology.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Dublin_core"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dc:creator</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It is a dublin core metadata term.</rdfs:seeAlso>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/isReferencedBy -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/isReferencedBy">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This annotation property indicates the source from which the knowledge is retrieved for a particular concept.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Dublin_core"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dc:isReferencedBy</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It is a dublin core metadata term.</rdfs:seeAlso>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This annotation property defines the title of ontology.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Dublin_core"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dc:title</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It is a dublin core metadata term.</rdfs:seeAlso>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/isPartOf -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isPartOf">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dublin core annotation property to determine if the threat is connected to traditional or blockchain-based applications.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Dublin_core"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dcterms:isPartOf</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It is a dublin core metadata term.</rdfs:seeAlso>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This annotation property indicates the license document.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Dublin_core"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dcterms:license</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It is a dublin core metadata term.</rdfs:seeAlso>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#characteristicOf -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf">
+        <owl:inverseOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasCharacteristic"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A vulnerability is a characteristic of a one or more system assets that exposes weakness.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">characteristicOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#constraintOf -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#constraintOf">
+        <owl:inverseOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SecurityCriteria"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Security criteria is a constraint of business assets.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">constraintOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#exploits -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#exploits">
+        <owl:inverseOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#isExploitedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A threat exploits vulnerabilities in the system.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exploits</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#harms -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#harms">
+        <owl:inverseOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#isHarmedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Asset"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A vulnerability harms an asset.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">harms</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#hasCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#hasCharacteristic">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It is an inverse relation of characteristicOf where one or more system assets has a characteristic vulnerability that exposes weakness of system assets.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasCharacteristic</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#hasConstraint -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SecurityCriteria"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It is an inverse relation of constraintOf where security criteria is a constraint of business assets.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasConstraint</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#isExploitedBy -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#isExploitedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It is an inverse relation of exploits where vulnerability in the system is exploited by threat.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isExploitedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#isHarmedBy -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#isHarmedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Asset"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It is an inverse relation of harms where an asset is harmed by a vulnerability.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isHarmedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#isMitigatedBy -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#isMitigatedBy">
+        <owl:inverseOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It is an inverse relation of mitigates where  one or more vulnerabilities associated to a particular threat are mitigated by countermeasure.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isMitigatedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#isNegatedBy -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#isNegatedBy">
+        <owl:inverseOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SecurityCriteria"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It is an inverse relation of negates where security criteria of business assets is negated by vulnerability.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isNegatedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#isSupportedBy -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#isSupportedBy">
+        <owl:inverseOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It is an inverse relation of supports where one or more business assets is supported by system asset.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isSupportedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#isTargetedBy -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#isTargetedBy">
+        <owl:inverseOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It is an inverse relation of targets where one or more system assets are targeted by threat.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">isTargetedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#mitigates -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#mitigates">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A countermeasure mitigates one or more vulnerabilities associated to a particular threat.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mitigates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#negates -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#negates">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SecurityCriteria"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vulnerability negates the defined security criteria of business assets.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#supports -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#supports">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A system asset supports one or more business assets.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">supports</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#targets -->
+
+    <owl:ObjectProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#targets">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:range rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A threat targets one or more system assets.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">targets</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#Authors -->
+
+    <owl:DatatypeProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Authors">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It defines the authors of the book, book chapter, or research paper.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Authors</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#DOI -->
+
+    <owl:DatatypeProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#DOI">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Digital object identifier to uniquely identify a book, book chapter, or research paper.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DOI</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#Link -->
+
+    <owl:DatatypeProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Link">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It defines the link of the source if it is a web article.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Link</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#Pages -->
+
+    <owl:DatatypeProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Pages">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It defines the number of pages in the book, book chapter, or research paper.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pages</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#Publisher -->
+
+    <owl:DatatypeProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Publisher">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It defines who published the book, book chapter, or reserach paper.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Publisher</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#Title -->
+
+    <owl:DatatypeProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Title">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It defines the title of the book, book chapter, or research paper.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Title</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#Type -->
+
+    <owl:DatatypeProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Type">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It defines the type, for example, is it a book, book chapter, research paper, or web article.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#Year -->
+
+    <owl:DatatypeProperty rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Year">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It defines in which year the book, book chapter, or research paper is published.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Year</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#AcceptingUnconfirmedTransaction -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#AcceptingUnconfirmedTransaction">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#BlockConfirmation"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Transaction"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AcceptingUnconfirmedTransaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#AccessControl -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#AccessControl">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecord"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#PatientData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AccessControl</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#AccessControlWithCryptographicPrimitive -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#AccessControlWithCryptographicPrimitive">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AccessControlWithCryptographicPrimitive</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ActionLog -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ActionLog">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecord"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ActionLog</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#AlertHonestNode -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#AlertHonestNode">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AlertHonestNode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#AnchorConnection -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#AnchorConnection">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#AnonymityOverlayNetwork -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#AnonymityOverlayNetwork">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AnonymityOverlayNetwork</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#AntiDustModel -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#AntiDustModel">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AntiDustModel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#AppendOnlyLedger -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#AppendOnlyLedger">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AppendOnlyLedger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Block -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Block">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#BlockConfirmation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Block</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#BlockConfirmation -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#BlockConfirmation">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#DigitalAsset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#FastTransaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockConfirmation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#BlockGeneration -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#BlockGeneration">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockGeneration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#BlockWithholdingDelay -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#BlockWithholdingDelay">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockWithholdingDelay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#BlockchainAnonymizeData -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#BlockchainAnonymizeData">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockchainAnonymizeData</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#BlockchainBasedDataOwnership -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#BlockchainBasedDataOwnership">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockchainBasedDataOwnership</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#BlockchainBasedVersioningScheme -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#BlockchainBasedVersioningScheme">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockchainBasedVersioningScheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#CentralizedControl -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#CentralizedControl">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#UnprotectedLog"/>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ClinicalTrialData -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ClinicalTrialData">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#DataProcessing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ClinicalTrialData</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ClinicalTrialFraud -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ClinicalTrialFraud">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ClinicalTrialFraud</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ClosedFormFormulaProbability -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ClosedFormFormulaProbability">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ClosedFormFormulaProbability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#CodeAnalyzer -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#CodeAnalyzer">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CodeAnalyzer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Communication -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Communication">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Communication</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ComputationalConstraintBasedTechnique -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ComputationalConstraintBasedTechnique">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ComputationalConstraintBasedTechnique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ComputingPower -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ComputingPower">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkReputation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkResource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ComputingPower</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ComputingUniqueHashIdOfOriginalData -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ComputingUniqueHashIdOfOriginalData">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ComputingUniqueHashIdOfOriginalData</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Credential -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Credential">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#DigitalAsset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareOperation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credential</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Cryptography -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Cryptography">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Ledger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Transaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cryptography</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DataAccessRight -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataAccessRight">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#DataProcessing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataAccessRight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DataExchange -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataExchange">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Communication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataExchange</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DataProcessing -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataProcessing">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataProcessing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DataProvenance -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataProvenance">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataProvenance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DataTampering -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataTampering">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataTampering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DataTheft -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataTheft">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataTheft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DataValidation -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataValidation">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataValidation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Deanonymization -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Deanonymization">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deanonymization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DelayValidBlocksSubmission -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DelayValidBlocksSubmission">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Block"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MiningIncentive"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#TransactionValidation"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DelayValidBlocksSubmission</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DeviceSetting -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DeviceSetting">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DeviceSetting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DigitalAsset -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DigitalAsset">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DigitalAsset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DoubleSpending -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DoubleSpending">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DoubleSpending</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DrugsDetail -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DrugsDetail">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#DrugsTraceability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DrugsDetail</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DrugsTraceability -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DrugsTraceability">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DrugsTraceability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DustingTransaction -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DustingTransaction">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Ledger"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#P2PNetwork"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Transaction"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DustingTransaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#EclipseAttack -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#EclipseAttack">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EclipseAttack</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Employee -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Employee">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Stakeholder"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employee</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#EndpointThreat -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#EndpointThreat">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EndpointThreat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ErrorProneAuthenticityOfData -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ErrorProneAuthenticityOfData">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareDatabase"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalTransaction"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ErrorProneAuthenticityOfData</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ErrorProneSmartContract -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ErrorProneSmartContract">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Ledger"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SmartContract"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#TransactionValidation"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ErrorProneSmartContract</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#FakeIdentitiesCreation -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#FakeIdentitiesCreation">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Node"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NodeIdentity"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#P2PNetwork"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Transaction"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FakeIdentitiesCreation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#FastTransaction -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#FastTransaction">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FastTransaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#FullNode -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#FullNode">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Node"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FullNode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#GossipingProcess -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#GossipingProcess">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GossipingProcess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareDatabase -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareDatabase">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecord"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#PatientData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HealthcareDatabase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareNetwork -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareNetwork">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Communication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HealthcareNetwork</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareOperation -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareOperation">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HealthcareOperation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareSystem -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareSystem">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareDatabase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecord"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HealthcareSystem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#IPAddress -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#IPAddress">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#GossipingProcess"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPAddress</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ImproperInsuranceClaimVerification -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ImproperInsuranceClaimVerification">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#InsuranceData"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalBill"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ImproperInsuranceClaimVerification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ImproperSecurityControlsForDatabase -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ImproperSecurityControlsForDatabase">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataAccessRight"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareSystem"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ImproperSecurityControlsForDatabase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#InadequateClinicalTrialsData -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#InadequateClinicalTrialsData">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataAccessRight"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecord"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#PatientData"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InadequateClinicalTrialsData</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#IneffectiveCryptographicControl -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#IneffectiveCryptographicControl">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IneffectiveCryptographicControl</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#IneffectiveLogging -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#IneffectiveLogging">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#ActionLog"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IneffectiveLogging</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#IneffectivePatientRecruitment -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#IneffectivePatientRecruitment">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataAccessRight"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecord"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#PatientData"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IneffectivePatientRecruitment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#InformationFlow -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#InformationFlow">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InformationFlow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#InformationProcessing -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#InformationProcessing">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InformationProcessing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#InsecureCommunicationControl -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#InsecureCommunicationControl">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataExchange"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareNetwork"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InsecureCommunicationControl</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#InsuranceClaim -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#InsuranceClaim">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InsuranceClaim</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#InsuranceData -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#InsuranceData">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#InsuranceClaim"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InsuranceData</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#InsuranceFraud -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#InsuranceFraud">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InsuranceFraud</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#IoTDevice -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#IoTDevice">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#DeviceSetting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IoTDevice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#KeyPharase -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#KeyPharase">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Credential"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KeyPharase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#LackOfAwarness -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#LackOfAwarness">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Credential"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#User"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Wallet"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LackOfAwarness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#LackOfComputingPower -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#LackOfComputingPower">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ComputingPower"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Node"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#P2PNetwork"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#LackOfImmutableLog -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#LackOfImmutableLog">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#IneffectiveLogging"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LackOfImmutableLog</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#LackOfMedicalDataAccess -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#LackOfMedicalDataAccess">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataAccessRight"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalData"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#PatientData"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LackOfMedicalDataAccess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Ledger -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Ledger">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#DigitalAsset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareOperation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Transaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ledger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ManInTheMiddle -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ManInTheMiddle">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ManInTheMiddle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#MedicalBill -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalBill">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#InsuranceClaim"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#MedicalData -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalData">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MedicalData</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecord -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecord">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MedicalRecord</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecordsMishandling -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecordsMishandling">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#MedicalTransaction -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalTransaction">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#DataValidation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecord"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#PatientData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MedicalTransaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Miner -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Miner">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Node"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miner</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#MiningIncentive -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MiningIncentive">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#InformationProcessing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MiningIncentive</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#MiningProcess -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MiningProcess">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MiningProcess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#MiningProtocol -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MiningProtocol">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#MiningProcess"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MiningProtocol</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#MissingRequestsFiltering -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MissingRequestsFiltering">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NotHandlingLargeNumberOfRequestsToServer"/>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#NetworkAnalysisAndListening -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkAnalysisAndListening">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Transaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#NetworkReputation -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkReputation">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#TransactionValidation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NetworkReputation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#NetworkResource -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkResource">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NetworkResource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#NewNode -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NewNode">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NewNode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#NoAnonymizationOfPatientMedicalRecord -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NoAnonymizationOfPatientMedicalRecord">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NoAnonymizationOfPatientMedicalRecord</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#NoBackupOfLog -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NoBackupOfLog">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#UnprotectedLog"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NoBackupOfLog</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#NoGuaranteeOfMedicalRecordsAuthenticity -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NoGuaranteeOfMedicalRecordsAuthenticity">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareDatabase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NoGuaranteeOfMedicalRecordsAuthenticity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#NoProperAuthenticationOfNode -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NoProperAuthenticationOfNode">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkReputation"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Node"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#P2PNetwork"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Transaction"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NoProperAuthenticationOfNode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#NoQuantumComputingResistantCryptography -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NoQuantumComputingResistantCryptography">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Cryptography"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Node -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Node">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareOperation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Ledger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkReputation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NewNode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Transaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#TransactionValidation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#NodeIdentity -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NodeIdentity">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NewNode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NodeIdentity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#NotHandlingLargeNumberOfRequestsToServer -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NotHandlingLargeNumberOfRequestsToServer">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareDatabase"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareSystem"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#P2PNetwork -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#P2PNetwork">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareOperation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#InformationFlow"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Ledger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkResource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#TransactionValidation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P2PNetwork</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Password -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Password">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Credential"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Password</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#PatientData -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#PatientData">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PatientData</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#PoisoningNodesRoutingTable -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#PoisoningNodesRoutingTable">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#IPAddress"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Node"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#RoutingTable"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Transaction"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PoisoningNodesRoutingTable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#PossibleToManipulateEmployeesToGetDataAccess -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#PossibleToManipulateEmployeesToGetDataAccess">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Employee"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Stakeholder"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PossibleToManipulateEmployeesToGetDataAccess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#PrivateKey -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#PrivateKey">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Credential"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PrivateKey</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#QuantumComputingThreat -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#QuantumComputingThreat">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#RelyingOnCentralizedServer -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#RelyingOnCentralizedServer">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareDatabase"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareSystem"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RelyingOnCentralizedServer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#RelyingOnThirdParty -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#RelyingOnThirdParty">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareDatabase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RelyingOnThirdParty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Repudiation -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Repudiation">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#RoutingTable -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#RoutingTable">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#GossipingProcess"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RoutingTable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Server -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Server">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Server</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Service -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Service">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#SinglePointFailure -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SinglePointFailure">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#SmartCheck -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SmartCheck">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#CodeAnalyzer"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SmartCheck</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#SmartContract -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SmartContract">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Transaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SmartContract</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#SmartContractThreat -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SmartContractThreat">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SmartContractThreat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#SocialEngineering -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SocialEngineering">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SocialEngineering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Stakeholder -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Stakeholder">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecord"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#SupplyChainProcess -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SupplyChainProcess">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#DrugsTraceability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SupplyChainProcess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#SybilAttack -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SybilAttack">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SybilAttack</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#SybilBasedDenialOfService -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SybilBasedDenialOfService">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SybilBasedDenialOfService</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#SybilNodesParticipateInConsensus -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SybilNodesParticipateInConsensus">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MiningProtocol"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Node"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#P2PNetwork"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SybilNodesParticipateInConsensus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#TamperingDeviceSetting -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#TamperingDeviceSetting">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TamperingDeviceSetting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Tor -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Tor">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#AnonymityOverlayNetwork"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Transaction -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Transaction">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#BlockGeneration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareOperation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Ledger"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#TransactionValidation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#TransactionValidation -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#TransactionValidation">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareOperation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Transaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TransactionValidation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#UnprotectedLog -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#UnprotectedLog">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#IneffectiveLogging"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UnprotectedLog</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#User -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#User">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareOperation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Validator -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Validator">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Node"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Validator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Wallet -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Wallet">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#DigitalAsset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareOperation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wallet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#WeakAccessControl -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#WeakAccessControl">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#AccessControl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WeakAccessControl</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#WeakControlOverMedicalRecord -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#WeakControlOverMedicalRecord">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#DataAccessRight"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#WeakControlToProveDataChangesByAuthorizedUser -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#WeakControlToProveDataChangesByAuthorizedUser">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WeakControlToProveDataChangesByAuthorizedUser</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#WeakControlsOnSettingsOfMedicalDevice -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#WeakControlsOnSettingsOfMedicalDevice">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#IoTDevice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WeakControlsOnSettingsOfMedicalDevice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#WeakTraceabilityControl -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#WeakTraceabilityControl">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DrugsDetail"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SupplyChainProcess"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WeakTraceabilityControl</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#51PercentAtack -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#51PercentAtack">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ComputingPower"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Node"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#P2PNetwork"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Integrity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">51PercentAtack</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#Asset -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Asset">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#isHarmedBy"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Dubois2010"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Matulevicius2017"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asset are valuable and plays a role accomplishing the organization’s objectives. Assets are classified as system and business assets.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#Availability -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Availability">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SecurityCriteria"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Dubois2010"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Matulevicius2017"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The information and services are available to authorized users when needed.</rdfs:comment>
+        <rdfs:label>Availability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Asset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SecurityCriteria"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Dubois2010"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Matulevicius2017"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business assets describe the information, processes, capabilities and skills essential to the business and its core mission.</rdfs:comment>
+        <rdfs:label>BusinessAsset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#Confidentiality -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SecurityCriteria"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Dubois2010"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Matulevicius2017"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The data is only available to authorized users.</rdfs:comment>
+        <rdfs:label>Confidentiality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#Countermeasure -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SecurityCriteria"/>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Dubois2010"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Matulevicius2017"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Countermeasures are controls to improve the security of the system. Countermeasure can be processes, policies, devices, practices or other actions or components of the information system and its organisation that act to reduce risks.</rdfs:comment>
+        <rdfs:label>Countermeasure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#Integrity -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Integrity">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SecurityCriteria"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Dubois2010"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Matulevicius2017"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Integrity refers to the certainty that the data is not tampered with during or after the submission.</rdfs:comment>
+        <rdfs:label>Integrity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#SecurityCriteria -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/ULRO#SecurityCriteria">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#constraintOf"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Dubois2010"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Matulevicius2017"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Security criteria is a constraint on business assets and characterize a security need which are expressed as confidentiality, integrity and availability of business assets.</rdfs:comment>
+        <rdfs:label>SecurityCriteria</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#SystemAsset -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Asset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#BusinessAsset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Dubois2010"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Matulevicius2017"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Systems assets are the component or part of an information system, valuable to the organization since it supports business assets.</rdfs:comment>
+        <rdfs:label>SystemAsset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#Threat -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Threat">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Dubois2010"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Matulevicius2017"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A threat is an incident initiated by a threat agent using an attack method to target one or more IS assets by exploiting their vulnerabilities.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Threat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#Vulnerability -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SecurityCriteria"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Dubois2010"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Matulevicius2017"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A vulnerability is the characteristic of an IS asset or group of IS assets that exposes a weakness or flaw in terms of security.</rdfs:comment>
+        <rdfs:label>Vulnerability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#Dublin_core -->
+
+    <owl:NamedIndividual rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Dublin_core">
+        <Link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.dublincore.org/specifications/dublin-core/dcmi-terms</Link>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specification of all metadata terms maintained by the Dublin Core Metadata Initiative.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dublin core</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#Dubois2010 -->
+
+    <owl:NamedIndividual rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Dubois2010">
+        <Authors rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Éric Dubois, Patrick Heymans, Nicolas Mayer, Raimundas Matulevičius</Authors>
+        <DOI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-12544-7_16</DOI>
+        <Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#string">289-306</Pages>
+        <Publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Springer Berlin Heidelberg</Publisher>
+        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Systematic Approach to Define the Domain of Information System Security Risk Management</Title>
+        <Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book chapter</Type>
+        <Year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2010</Year>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Systematic Approach to Define the Domain of Information System Security Risk Management</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reference</rdfs:seeAlso>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/ULRO#Matulevicius2017 -->
+
+    <owl:NamedIndividual rdf:about="https://mmisw.org/ont/~mubashar/ULRO#Matulevicius2017">
+        <Authors rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raimundas Matulevičius</Authors>
+        <DOI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-319-61717-6</DOI>
+        <Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#string">218</Pages>
+        <Publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Springer International Publishing</Publisher>
+        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fundamentals of Secure System Modelling</Title>
+        <Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book</Type>
+        <Year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2017</Year>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fundamentals of Secure System Modelling</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reference</rdfs:seeAlso>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
