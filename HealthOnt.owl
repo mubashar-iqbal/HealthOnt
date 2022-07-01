@@ -890,11 +890,38 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DataValidationWithoutThirdParty -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataValidationWithoutThirdParty">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataValidationWithoutThirdParty</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Deanonymization -->
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Deanonymization">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deanonymization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DecentralizedNetwork -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DecentralizedNetwork">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DecentralizedNetwork</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DecentralizedVerificationOfInsurer -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DecentralizedVerificationOfInsurer">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DecentralizedVerificationOfInsurer</rdfs:label>
     </owl:Class>
     
 
@@ -924,6 +951,15 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DelayValidBlocksSubmission</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DeterministicRandomEviction -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DeterministicRandomEviction">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DeterministicRandomEviction</rdfs:label>
     </owl:Class>
     
 
@@ -960,6 +996,51 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DigitalAsset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DisableDirectIncomingConnection -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DisableDirectIncomingConnection">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisableDirectIncomingConnection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DistributedAccessControlMechanism -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DistributedAccessControlMechanism">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DistributedAccessControlMechanism</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DistributedIPFSForStorage -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DistributedIPFSForStorage">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DistributedIPFSForStorage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DistributedLedger -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DistributedLedger">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DistributedLedger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DistributedVerifiedRecordsAmongNode -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DistributedVerifiedRecordsAmongNode">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DistributedVerifiedRecordsAmongNode</rdfs:label>
     </owl:Class>
     
 
@@ -1055,6 +1136,15 @@
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#EndpointThreat">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EndpointThreat</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#EnhanceNetworkPolicy -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#EnhanceNetworkPolicy">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EnhanceNetworkPolicy</rdfs:label>
     </owl:Class>
     
 
@@ -1190,6 +1280,15 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#FeelerConnection -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#FeelerConnection">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FeelerConnection</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#FullNode -->
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#FullNode">
@@ -1210,6 +1309,15 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GossipingProcess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#HardwareSecurityModule -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HardwareSecurityModule">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HardwareSecurityModule</rdfs:label>
     </owl:Class>
     
 
@@ -1304,6 +1412,31 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPAddress</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ImmediateBlockSubmissionScheme -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ImmediateBlockSubmissionScheme">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ImmediateBlockSubmissionScheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ImmutableDrugsTrail -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ImmutableDrugsTrail">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ImmutableLogging -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ImmutableLogging">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
     </owl:Class>
     
 
@@ -1403,6 +1536,33 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InadequateClinicalTrialsData</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#IncreaseComputingPower -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#IncreaseComputingPower">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IncreaseComputingPower</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#IncreaseConfirmedBlock -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#IncreaseConfirmedBlock">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IncreaseConfirmedBlock</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#IncreaseRiskOfEarningLessIncentive -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#IncreaseRiskOfEarningLessIncentive">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IncreaseRiskOfEarningLessIncentive</rdfs:label>
     </owl:Class>
     
 
@@ -1539,6 +1699,14 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InsecureCommunicationControl</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#InsertObserver -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#InsertObserver">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
     </owl:Class>
     
 
@@ -1769,11 +1937,29 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ListeningPeriod -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ListeningPeriod">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ListeningPeriod</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ManInTheMiddle -->
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ManInTheMiddle">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ManInTheMiddle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#MedicaRecordOwnershipPermissioning -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicaRecordOwnershipPermissioning">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MedicaRecordOwnershipPermissioning</rdfs:label>
     </owl:Class>
     
 
@@ -1938,6 +2124,42 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#MixingTechnique -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MixingTechnique">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MixingTechnique</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#MonitorComputingPower -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MonitorComputingPower">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MonitorComputingPower</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#MonitorNodesBehavior -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MonitorNodesBehavior">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MonitorNodesBehavior</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#MultiLevelAuthentication -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MultiLevelAuthentication">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultiLevelAuthentication</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#NetworkAnalysisAndListening -->
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkAnalysisAndListening">
@@ -1954,6 +2176,15 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#NetworkJoiningFee -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkJoiningFee">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NetworkJoiningFee</rdfs:label>
     </owl:Class>
     
 
@@ -2212,9 +2443,28 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ObfusctedData -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ObfusctedData">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ObfusctedData</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#P2PBasedEncryptedCommunication -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#P2PBasedEncryptedCommunication">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P2PBasedEncryptedCommunication</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#P2PNetwork -->
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#P2PNetwork">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -2271,6 +2521,33 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PatientData</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#PenetrationTesting -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#PenetrationTesting">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PenetrationTesting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#PermissionedSetting -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#PermissionedSetting">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PermissionedSetting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#PluggableConsensus -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#PluggableConsensus">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PluggableConsensus</rdfs:label>
     </owl:Class>
     
 
@@ -2341,6 +2618,15 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#PowerMonitoringTool -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#PowerMonitoringTool">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PowerMonitoringTool</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#PrivateKey -->
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#PrivateKey">
@@ -2350,10 +2636,37 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ProofOfWorkConsensus -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ProofOfWorkConsensus">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProofOfWorkConsensus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#QuantumComputingResistantCryptography -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#QuantumComputingResistantCryptography">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QuantumComputingResistantCryptography</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#QuantumComputingThreat -->
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#QuantumComputingThreat">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#RandomOutgoingConnection -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#RandomOutgoingConnection">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RandomOutgoingConnection</rdfs:label>
     </owl:Class>
     
 
@@ -2415,6 +2728,15 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#RingSignature -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#RingSignature">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RingSignature</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#RoutingTable -->
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#RoutingTable">
@@ -2426,6 +2748,15 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RoutingTable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#SecurityAwareness -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SecurityAwareness">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SecurityAwareness</rdfs:label>
     </owl:Class>
     
 
@@ -2510,6 +2841,15 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#StakeRequirementsInPoSConsensus -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#StakeRequirementsInPoSConsensus">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">StakeRequirementsInPoSConsensus</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Stakeholder -->
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Stakeholder">
@@ -2520,6 +2860,24 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecord"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#StoreEncryptedDataOnOffChain -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#StoreEncryptedDataOnOffChain">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">StoreEncryptedDataOnOffChain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#StoringDevicesSettingsInImmutableLedger -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#StoringDevicesSettingsInImmutableLedger">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">StoringDevicesSettingsInImmutableLedger</rdfs:label>
     </owl:Class>
     
 
@@ -2586,6 +2944,15 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#TamperResistant -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#TamperResistant">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TamperResistant</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#TamperingDeviceSetting -->
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#TamperingDeviceSetting">
@@ -2600,6 +2967,15 @@
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Tor">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#AnonymityOverlayNetwork"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#TraceableDrugsTrail -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#TraceableDrugsTrail">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TraceableDrugsTrail</rdfs:label>
     </owl:Class>
     
 
@@ -2650,6 +3026,15 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#TransactionFee -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#TransactionFee">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TransactionFee</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#TransactionValidation -->
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#TransactionValidation">
@@ -2674,6 +3059,15 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TransactionValidation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#TrustedAuthorisedNodesInHLF -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#TrustedAuthorisedNodesInHLF">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TrustedAuthorisedNodesInHLF</rdfs:label>
     </owl:Class>
     
 
@@ -2708,11 +3102,29 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ValidateNodeConnection -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ValidateNodeConnection">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValidateNodeConnection</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Validator -->
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Validator">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Node"/>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Validator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#VotingBasedConsensus -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#VotingBasedConsensus">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VotingBasedConsensus</rdfs:label>
     </owl:Class>
     
 
@@ -2872,6 +3284,24 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WeakTraceabilityControl</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#WhiteListedNode -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#WhiteListedNode">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WhiteListedNode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#ZeroKnowledgeProof -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ZeroKnowledgeProof">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZeroKnowledgeProof</rdfs:label>
     </owl:Class>
     
 
