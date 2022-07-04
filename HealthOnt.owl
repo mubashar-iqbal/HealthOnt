@@ -475,6 +475,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#AccessControlWithCryptographicPrimitive">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#WeakAccessControl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AccessControlWithCryptographicPrimitive</rdfs:label>
     </owl:Class>
     
@@ -499,6 +505,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#AlertHonestNode">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#AcceptingUnconfirmedTransaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AlertHonestNode</rdfs:label>
     </owl:Class>
     
@@ -508,6 +520,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#AnchorConnection">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#PoisoningNodesRoutingTable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -516,6 +534,18 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#AnonymityOverlayNetwork">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkAnalysis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkListening"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AnonymityOverlayNetwork</rdfs:label>
     </owl:Class>
     
@@ -525,6 +555,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#AntiDustModel">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#DustingTransaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AntiDustModel</rdfs:label>
     </owl:Class>
     
@@ -534,6 +570,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#AppendOnlyLedger">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#ErrorProneAuthenticityOfData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AppendOnlyLedger</rdfs:label>
     </owl:Class>
     
@@ -601,6 +643,26 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#BlockWithholdingDelay">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#DelayValidBlocksSubmission"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Block"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MiningIncentive"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#TransactionValidation"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockWithholdingDelay</rdfs:label>
     </owl:Class>
     
@@ -610,6 +672,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#BlockchainAnonymizeData">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NoAnonymizationOfPatientMedicalRecord"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockchainAnonymizeData</rdfs:label>
     </owl:Class>
     
@@ -619,6 +687,18 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#BlockchainBasedDataOwnership">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#InadequateClinicalTrialsData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#IneffectivePatientRecruitment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockchainBasedDataOwnership</rdfs:label>
     </owl:Class>
     
@@ -628,6 +708,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#BlockchainBasedVersioningScheme">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#WeakControlToProveDataChangesByAuthorizedUser"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockchainBasedVersioningScheme</rdfs:label>
     </owl:Class>
     
@@ -660,6 +746,34 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ClinicalTrialFraud">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#InadequateClinicalTrialsData"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#IneffectivePatientRecruitment"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#LackOfMedicalDataAccess"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataAccessRight"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecord"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#PatientData"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ClinicalTrialFraud</rdfs:label>
     </owl:Class>
     
@@ -669,6 +783,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ClosedFormFormulaProbability">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#AcceptingUnconfirmedTransaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ClosedFormFormulaProbability</rdfs:label>
     </owl:Class>
     
@@ -678,6 +798,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#CodeAnalyzer">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#ErrorProneSmartContract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CodeAnalyzer</rdfs:label>
     </owl:Class>
     
@@ -702,6 +828,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ComputationalConstraintBasedTechnique">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#SybilNodesParticipateInConsensus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ComputationalConstraintBasedTechnique</rdfs:label>
     </owl:Class>
     
@@ -732,7 +864,40 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ComputingUniqueHashIdOfOriginalData">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#ErrorProneAuthenticityOfData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ComputingUniqueHashIdOfOriginalData</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#CounterfeitDrug -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#CounterfeitDrug">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#WeakTraceabilityControl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DrugsDetail"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DrugsTraceability"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -846,6 +1011,24 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataProvenance">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#ErrorProneAuthenticityOfData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#WeakControlToProveDataChangesByAuthorizedUser"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#WeakTraceabilityControl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataProvenance</rdfs:label>
     </owl:Class>
     
@@ -855,6 +1038,33 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataTampering">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ErrorProneAuthenticityOfData"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#WeakAccessControl"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#AccessControl"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareDatabase"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalTransaction"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataTampering</rdfs:label>
     </owl:Class>
     
@@ -864,6 +1074,34 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataTheft">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ImproperSecurityControlsForDatabase"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#IneffectiveCryptographicControl"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#WeakAccessControl"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#AccessControl"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataAccessRight"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareSystem"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataTheft</rdfs:label>
     </owl:Class>
     
@@ -894,6 +1132,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataValidationWithoutThirdParty">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#ErrorProneAuthenticityOfData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataValidationWithoutThirdParty</rdfs:label>
     </owl:Class>
     
@@ -903,6 +1147,28 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Deanonymization">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkAnalysis"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkListening"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Transaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deanonymization</rdfs:label>
     </owl:Class>
     
@@ -912,6 +1178,30 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DecentralizedNetwork">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#ErrorProneAuthenticityOfData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NoGuaranteeOfMedicalRecordsAuthenticity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NotHandlingLargeNumberOfRequestsToServer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#RelyingOnCentralizedServer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DecentralizedNetwork</rdfs:label>
     </owl:Class>
     
@@ -921,6 +1211,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DecentralizedVerificationOfInsurer">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#ImproperInsuranceClaimVerification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DecentralizedVerificationOfInsurer</rdfs:label>
     </owl:Class>
     
@@ -959,6 +1255,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DeterministicRandomEviction">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#PoisoningNodesRoutingTable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DeterministicRandomEviction</rdfs:label>
     </owl:Class>
     
@@ -1004,6 +1306,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DisableDirectIncomingConnection">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#PoisoningNodesRoutingTable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DisableDirectIncomingConnection</rdfs:label>
     </owl:Class>
     
@@ -1013,6 +1321,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DistributedAccessControlMechanism">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#WeakAccessControl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DistributedAccessControlMechanism</rdfs:label>
     </owl:Class>
     
@@ -1022,6 +1336,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DistributedIPFSForStorage">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#InsecureCommunicationControl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DistributedIPFSForStorage</rdfs:label>
     </owl:Class>
     
@@ -1031,6 +1351,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DistributedLedger">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#ErrorProneAuthenticityOfData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DistributedLedger</rdfs:label>
     </owl:Class>
     
@@ -1040,6 +1366,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DistributedVerifiedRecordsAmongNode">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#ImproperInsuranceClaimVerification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DistributedVerifiedRecordsAmongNode</rdfs:label>
     </owl:Class>
     
@@ -1049,6 +1381,35 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DoubleSpending">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#AcceptingUnconfirmedTransaction"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#51PercentAtack"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#BlockConfirmation"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ComputingPower"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Node"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#P2PNetwork"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Transaction"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DoubleSpending</rdfs:label>
     </owl:Class>
     
@@ -1117,6 +1478,27 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#EclipseAttack">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#PoisoningNodesRoutingTable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#IPAddress"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Node"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#RoutingTable"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Transaction"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EclipseAttack</rdfs:label>
     </owl:Class>
     
@@ -1135,6 +1517,26 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#EndpointThreat">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#LackOfAwarness"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Credential"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#User"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Wallet"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EndpointThreat</rdfs:label>
     </owl:Class>
     
@@ -1144,6 +1546,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#EnhanceNetworkPolicy">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#AcceptingUnconfirmedTransaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EnhanceNetworkPolicy</rdfs:label>
     </owl:Class>
     
@@ -1284,6 +1692,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#FeelerConnection">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#PoisoningNodesRoutingTable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FeelerConnection</rdfs:label>
     </owl:Class>
     
@@ -1317,6 +1731,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HardwareSecurityModule">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#LackOfAwarness"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HardwareSecurityModule</rdfs:label>
     </owl:Class>
     
@@ -1420,6 +1840,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ImmediateBlockSubmissionScheme">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#DelayValidBlocksSubmission"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ImmediateBlockSubmissionScheme</rdfs:label>
     </owl:Class>
     
@@ -1429,6 +1855,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ImmutableDrugsTrail">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#WeakTraceabilityControl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1437,6 +1869,18 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ImmutableLogging">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#ErrorProneAuthenticityOfData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#LackOfImmutableLog"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1544,6 +1988,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#IncreaseComputingPower">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#LackOfComputingPower"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IncreaseComputingPower</rdfs:label>
     </owl:Class>
     
@@ -1553,6 +2003,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#IncreaseConfirmedBlock">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#AcceptingUnconfirmedTransaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IncreaseConfirmedBlock</rdfs:label>
     </owl:Class>
     
@@ -1562,6 +2018,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#IncreaseRiskOfEarningLessIncentive">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#DelayValidBlocksSubmission"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IncreaseRiskOfEarningLessIncentive</rdfs:label>
     </owl:Class>
     
@@ -1707,6 +2169,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#InsertObserver">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#AcceptingUnconfirmedTransaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1745,6 +2213,25 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#InsuranceFraud">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#ImproperInsuranceClaimVerification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#InsuranceData"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalBill"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InsuranceFraud</rdfs:label>
     </owl:Class>
     
@@ -1891,6 +2378,15 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#LatticeBased -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#LatticeBased">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#QuantumSafeCryptography"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LatticeBased</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Ledger -->
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Ledger">
@@ -1941,6 +2437,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ListeningPeriod">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#AcceptingUnconfirmedTransaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ListeningPeriod</rdfs:label>
     </owl:Class>
     
@@ -1950,6 +2452,33 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ManInTheMiddle">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#InsecureCommunicationControl"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NoAnonymizationOfPatientMedicalRecord"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataExchange"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareNetwork"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareSystem"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ManInTheMiddle</rdfs:label>
     </owl:Class>
     
@@ -1959,6 +2488,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicaRecordOwnershipPermissioning">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#WeakControlOverMedicalRecord"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MedicaRecordOwnershipPermissioning</rdfs:label>
     </owl:Class>
     
@@ -2031,6 +2566,33 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecordsMishandling">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NoGuaranteeOfMedicalRecordsAuthenticity"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#RelyingOnThirdParty"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#WeakControlOverMedicalRecord"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DataAccessRight"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareDatabase"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2128,6 +2690,18 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MixingTechnique">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkAnalysis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkListening"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MixingTechnique</rdfs:label>
     </owl:Class>
     
@@ -2137,6 +2711,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MonitorComputingPower">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#LackOfComputingPower"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MonitorComputingPower</rdfs:label>
     </owl:Class>
     
@@ -2146,6 +2726,18 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MonitorNodesBehavior">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#FakeIdentitiesCreation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NoProperAuthenticationOfNode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MonitorNodesBehavior</rdfs:label>
     </owl:Class>
     
@@ -2155,14 +2747,29 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MultiLevelAuthentication">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#LackOfAwarness"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MultiLevelAuthentication</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#NetworkAnalysisAndListening -->
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Multivariate -->
 
-    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkAnalysisAndListening">
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Multivariate">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#QuantumSafeCryptography"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multivariate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#NetworkAnalysis -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkAnalysis">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -2184,7 +2791,39 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkJoiningFee">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#FakeIdentitiesCreation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NoProperAuthenticationOfNode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NetworkJoiningFee</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#NetworkListening -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkListening">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#characteristicOf"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Transaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#negates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2329,9 +2968,9 @@
     
 
 
-    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#NoQuantumComputingResistantCryptography -->
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#NoQuantumSafeCryptography -->
 
-    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NoQuantumComputingResistantCryptography">
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NoQuantumSafeCryptography">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Vulnerability"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -2352,6 +2991,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NoQuantumSafeCryptography</rdfs:label>
     </owl:Class>
     
 
@@ -2447,15 +3087,27 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ObfusctedData">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#IneffectiveCryptographicControl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ObfusctedData</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#P2PBasedEncryptedCommunication -->
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#P2PEncryptedCommunication -->
 
-    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#P2PBasedEncryptedCommunication">
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#P2PEncryptedCommunication">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#InsecureCommunicationControl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P2PBasedEncryptedCommunication</rdfs:label>
     </owl:Class>
     
@@ -2466,6 +3118,24 @@
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#P2PNetwork">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#SystemAsset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#ImproperSecurityControlsForDatabase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NotHandlingLargeNumberOfRequestsToServer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#RelyingOnCentralizedServer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#supports"/>
@@ -2529,6 +3199,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#PenetrationTesting">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#ErrorProneSmartContract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PenetrationTesting</rdfs:label>
     </owl:Class>
     
@@ -2538,6 +3214,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#PermissionedSetting">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#ImproperSecurityControlsForDatabase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PermissionedSetting</rdfs:label>
     </owl:Class>
     
@@ -2547,6 +3229,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#PluggableConsensus">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#51PercentAtack"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PluggableConsensus</rdfs:label>
     </owl:Class>
     
@@ -2622,6 +3310,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#PowerMonitoringTool">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#51PercentAtack"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PowerMonitoringTool</rdfs:label>
     </owl:Class>
     
@@ -2640,16 +3334,13 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ProofOfWorkConsensus">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#ErrorProneAuthenticityOfData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProofOfWorkConsensus</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#QuantumComputingResistantCryptography -->
-
-    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#QuantumComputingResistantCryptography">
-        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QuantumComputingResistantCryptography</rdfs:label>
     </owl:Class>
     
 
@@ -2658,6 +3349,33 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#QuantumComputingThreat">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NoQuantumSafeCryptography"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Cryptography"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#QuantumSafeCryptography -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#QuantumSafeCryptography">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NoQuantumSafeCryptography"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QuantumSafeCryptography</rdfs:label>
     </owl:Class>
     
 
@@ -2666,6 +3384,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#RandomOutgoingConnection">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#PoisoningNodesRoutingTable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RandomOutgoingConnection</rdfs:label>
     </owl:Class>
     
@@ -2724,6 +3448,32 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Repudiation">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#LackOfImmutableLog"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#WeakControlToProveDataChangesByAuthorizedUser"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ActionLog"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareSystem"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2732,6 +3482,18 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#RingSignature">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkAnalysis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkListening"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RingSignature</rdfs:label>
     </owl:Class>
     
@@ -2756,6 +3518,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SecurityAwareness">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#LackOfAwarness"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SecurityAwareness</rdfs:label>
     </owl:Class>
     
@@ -2795,6 +3563,32 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SinglePointFailure">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NotHandlingLargeNumberOfRequestsToServer"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#RelyingOnCentralizedServer"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareDatabase"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#HealthcareSystem"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2827,6 +3621,26 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SmartContractThreat">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#ErrorProneSmartContract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Ledger"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SmartContract"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#TransactionValidation"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SmartContractThreat</rdfs:label>
     </owl:Class>
     
@@ -2836,6 +3650,25 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SocialEngineering">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#PossibleToManipulateEmployeesToGetDataAccess"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Employee"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Stakeholder"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SocialEngineering</rdfs:label>
     </owl:Class>
     
@@ -2845,6 +3678,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#StakeRequirementsInPoSConsensus">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#FakeIdentitiesCreation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">StakeRequirementsInPoSConsensus</rdfs:label>
     </owl:Class>
     
@@ -2868,6 +3707,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#StoreEncryptedDataOnOffChain">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#IneffectiveCryptographicControl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">StoreEncryptedDataOnOffChain</rdfs:label>
     </owl:Class>
     
@@ -2877,6 +3722,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#StoringDevicesSettingsInImmutableLedger">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#WeakControlsOnSettingsOfMedicalDevice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">StoringDevicesSettingsInImmutableLedger</rdfs:label>
     </owl:Class>
     
@@ -2901,6 +3752,35 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SybilAttack">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#FakeIdentitiesCreation"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#LackOfComputingPower"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NoProperAuthenticationOfNode"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Node"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#NodeIdentity"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#P2PNetwork"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Transaction"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SybilAttack</rdfs:label>
     </owl:Class>
     
@@ -2910,6 +3790,35 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SybilBasedDenialOfService">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DustingTransaction"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SybilNodesParticipateInConsensus"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Ledger"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MiningProtocol"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Node"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#P2PNetwork"/>
+                            <rdf:Description rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Transaction"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SybilBasedDenialOfService</rdfs:label>
     </owl:Class>
     
@@ -2948,6 +3857,18 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#TamperResistant">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#ErrorProneAuthenticityOfData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NoGuaranteeOfMedicalRecordsAuthenticity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TamperResistant</rdfs:label>
     </owl:Class>
     
@@ -2957,6 +3878,18 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#TamperingDeviceSetting">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Threat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#exploits"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#WeakControlsOnSettingsOfMedicalDevice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#targets"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#IoTDevice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TamperingDeviceSetting</rdfs:label>
     </owl:Class>
     
@@ -2975,6 +3908,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#TraceableDrugsTrail">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#WeakTraceabilityControl"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TraceableDrugsTrail</rdfs:label>
     </owl:Class>
     
@@ -3030,6 +3969,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#TransactionFee">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#51PercentAtack"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TransactionFee</rdfs:label>
     </owl:Class>
     
@@ -3063,11 +4008,17 @@
     
 
 
-    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#TrustedAuthorisedNodesInHLF -->
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#TrustedAuthorizedNodesInHLF -->
 
-    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#TrustedAuthorisedNodesInHLF">
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#TrustedAuthorizedNodesInHLF">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TrustedAuthorisedNodesInHLF</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#ErrorProneAuthenticityOfData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TrustedAuthorizedNodesInHLF</rdfs:label>
     </owl:Class>
     
 
@@ -3106,6 +4057,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ValidateNodeConnection">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NoProperAuthenticationOfNode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ValidateNodeConnection</rdfs:label>
     </owl:Class>
     
@@ -3124,6 +4081,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#VotingBasedConsensus">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#ErrorProneAuthenticityOfData"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VotingBasedConsensus</rdfs:label>
     </owl:Class>
     
@@ -3292,6 +4255,12 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#WhiteListedNode">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#PoisoningNodesRoutingTable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WhiteListedNode</rdfs:label>
     </owl:Class>
     
@@ -3301,6 +4270,18 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#ZeroKnowledgeProof">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkAnalysis"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NetworkListening"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZeroKnowledgeProof</rdfs:label>
     </owl:Class>
     
