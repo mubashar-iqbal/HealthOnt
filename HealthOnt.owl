@@ -526,6 +526,7 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#PoisoningNodesRoutingTable"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AnchorConnection</rdfs:label>
     </owl:Class>
     
 
@@ -723,6 +724,7 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#CentralizedControl">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#UnprotectedLog"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CentralizedControl</rdfs:label>
     </owl:Class>
     
 
@@ -898,6 +900,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CounterfeitDrug</rdfs:label>
     </owl:Class>
     
 
@@ -1861,6 +1864,7 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#WeakTraceabilityControl"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ImmutableDrugsTrail</rdfs:label>
     </owl:Class>
     
 
@@ -1881,6 +1885,7 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#LackOfImmutableLog"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ImmutableLogging</rdfs:label>
     </owl:Class>
     
 
@@ -2175,6 +2180,7 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#AcceptingUnconfirmedTransaction"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InsertObserver</rdfs:label>
     </owl:Class>
     
 
@@ -2329,6 +2335,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LackOfComputingPower</rdfs:label>
     </owl:Class>
     
 
@@ -2509,6 +2516,7 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#InsuranceClaim"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MedicalBill</rdfs:label>
     </owl:Class>
     
 
@@ -2682,6 +2690,7 @@
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MissingRequestsFiltering">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#NotHandlingLargeNumberOfRequestsToServer"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MissingRequestsFiltering</rdfs:label>
     </owl:Class>
     
 
@@ -2783,6 +2792,7 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NetworkAnalysis</rdfs:label>
     </owl:Class>
     
 
@@ -2824,6 +2834,7 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Confidentiality"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NetworkListening</rdfs:label>
     </owl:Class>
     
 
@@ -3079,6 +3090,7 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Availability"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NotHandlingLargeNumberOfRequestsToServer</rdfs:label>
     </owl:Class>
     
 
@@ -3361,6 +3373,7 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Cryptography"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QuantumComputingThreat</rdfs:label>
     </owl:Class>
     
 
@@ -3474,6 +3487,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Repudiation</rdfs:label>
     </owl:Class>
     
 
@@ -3589,6 +3603,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SinglePointFailure</rdfs:label>
     </owl:Class>
     
 
@@ -3699,6 +3714,7 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecord"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stakeholder</rdfs:label>
     </owl:Class>
     
 
@@ -4170,6 +4186,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WeakControlOverMedicalRecord</rdfs:label>
     </owl:Class>
     
 
