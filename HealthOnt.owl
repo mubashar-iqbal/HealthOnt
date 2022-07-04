@@ -1320,9 +1320,9 @@
     
 
 
-    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DistributedAccessControlMechanism -->
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#DistributedAccessControl -->
 
-    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DistributedAccessControlMechanism">
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#DistributedAccessControl">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1330,7 +1330,7 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#WeakAccessControl"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DistributedAccessControlMechanism</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DistributedAccessControl</rdfs:label>
     </owl:Class>
     
 
@@ -2491,21 +2491,6 @@
     
 
 
-    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#MedicaRecordOwnershipPermissioning -->
-
-    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicaRecordOwnershipPermissioning">
-        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
-                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#WeakControlOverMedicalRecord"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MedicaRecordOwnershipPermissioning</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#MedicalBill -->
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalBill">
@@ -2570,6 +2555,22 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecordOwnership -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecordOwnership">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#WeakControlOverMedicalRecord"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medical records ownership permissioning.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MedicalRecordOwnership</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecordsMishandling -->
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#MedicalRecordsMishandling">
@@ -2601,6 +2602,7 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MedicalRecordsMishandling</rdfs:label>
     </owl:Class>
     
 
@@ -3120,7 +3122,7 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#InsecureCommunicationControl"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P2PBasedEncryptedCommunication</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P2PEncryptedCommunication</rdfs:label>
     </owl:Class>
     
 
@@ -3734,9 +3736,9 @@
     
 
 
-    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#StoringDevicesSettingsInImmutableLedger -->
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#StoringDeviceSettingInImmutableLedger -->
 
-    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#StoringDevicesSettingsInImmutableLedger">
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#StoringDeviceSettingInImmutableLedger">
         <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/ULRO#Countermeasure"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -3744,7 +3746,8 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#WeakControlsOnSettingsOfMedicalDevice"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">StoringDevicesSettingsInImmutableLedger</rdfs:label>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Using an immutable ledger to store the device settings and configurations to keep them integral.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">StoringDeviceSettingInImmutableLedger</rdfs:label>
     </owl:Class>
     
 
