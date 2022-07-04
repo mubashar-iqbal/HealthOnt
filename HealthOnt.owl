@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://mmisw.org/ont/~mubashar/HealthOnt#"
+<rdf:RDF xmlns="https://mmisw.org/ont/~mubashar/ULRO#"
      xml:base="https://mmisw.org/ont/~mubashar/ULRO"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -583,6 +583,38 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Asset -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Asset">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#isHarmedBy"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Vulnerability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Threat"/>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Vulnerability"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asset are valuable and plays a role accomplishing the organization’s objectives. Assets are classified as system and business assets.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Availability -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Availability">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#SecurityCriteria"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The information and services are available to authorized users when needed.</rdfs:comment>
+        <rdfs:label>Availability</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Block -->
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Block">
@@ -665,7 +697,9 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockchainApplication</terms:isPartOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockWithholdingDelay</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appeared</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -717,6 +751,26 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockchainBasedVersioningScheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#BusinessAsset -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#BusinessAsset">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Asset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#hasConstraint"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#SecurityCriteria"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Threat"/>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Vulnerability"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business assets describe the information, processes, capabilities and skills essential to the business and its core mission.</rdfs:comment>
+        <rdfs:label>BusinessAsset</rdfs:label>
     </owl:Class>
     
 
@@ -777,7 +831,9 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TraditionalApplication</terms:isPartOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ClinicalTrialFraud</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitigated</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -878,6 +934,18 @@
     
 
 
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Confidentiality -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Confidentiality">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#SecurityCriteria"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The data is only available to authorized users.</rdfs:comment>
+        <rdfs:label>Confidentiality</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#CounterfeitDrug -->
 
     <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#CounterfeitDrug">
@@ -901,7 +969,29 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TraditionalApplication</terms:isPartOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CounterfeitDrug</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitigated</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Countermeasure -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Countermeasure">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#mitigates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Vulnerability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#SecurityCriteria"/>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Threat"/>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Vulnerability"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Countermeasures are controls to improve the security of the system. Countermeasure can be processes, policies, devices, practices or other actions or components of the information system and its organisation that act to reduce risks.</rdfs:comment>
+        <rdfs:label>Countermeasure</rdfs:label>
     </owl:Class>
     
 
@@ -1069,7 +1159,9 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TraditionalApplication</terms:isPartOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataTampering</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitigated</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1106,7 +1198,9 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TraditionalApplication</terms:isPartOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DataTheft</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitigated</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1173,7 +1267,9 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Transaction"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockchainApplication</terms:isPartOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deanonymization</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appeared</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1414,7 +1510,9 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockchainApplication</terms:isPartOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DoubleSpending</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appeared</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1503,7 +1601,9 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockchainApplication</terms:isPartOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EclipseAttack</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appeared</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1541,7 +1641,9 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockchainApplication</terms:isPartOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EndpointThreat</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appeared</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -2239,7 +2341,21 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TraditionalApplication</terms:isPartOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InsuranceFraud</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitigated</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Integrity -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Integrity">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#SecurityCriteria"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Integrity refers to the certainty that the data is not tampered with during or after the submission.</rdfs:comment>
+        <rdfs:label>Integrity</rdfs:label>
     </owl:Class>
     
 
@@ -2487,7 +2603,9 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TraditionalApplication</terms:isPartOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ManInTheMiddle</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitigated</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -2602,7 +2720,9 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TraditionalApplication</terms:isPartOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MedicalRecordsMishandling</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitigated</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -3375,7 +3495,9 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Cryptography"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockchainApplication</terms:isPartOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QuantumComputingThreat</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appeared</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -3489,7 +3611,9 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TraditionalApplication</terms:isPartOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Repudiation</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitigated</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -3541,6 +3665,24 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SecurityAwareness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#SecurityCriteria -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SecurityCriteria">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#constraintOf"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#BusinessAsset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Threat"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Security criteria is a constraint on business assets and characterize a security need which are expressed as confidentiality, integrity and availability of business assets.</rdfs:comment>
+        <rdfs:label>SecurityCriteria</rdfs:label>
     </owl:Class>
     
 
@@ -3605,7 +3747,9 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TraditionalApplication</terms:isPartOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SinglePointFailure</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitigated</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -3658,7 +3802,9 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockchainApplication</terms:isPartOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SmartContractThreat</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appeared</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -3686,7 +3832,9 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TraditionalApplication</terms:isPartOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SocialEngineering</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitigated</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -3799,7 +3947,9 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockchainApplication</terms:isPartOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SybilAttack</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appeared</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -3837,7 +3987,9 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlockchainApplication</terms:isPartOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SybilBasedDenialOfService</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appeared</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -3867,6 +4019,26 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SybilNodesParticipateInConsensus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#SystemAsset -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SystemAsset">
+        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Asset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#supports"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#BusinessAsset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Threat"/>
+        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Vulnerability"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Systems assets are the component or part of an information system, valuable to the organization since it supports business assets.</rdfs:comment>
+        <rdfs:label>SystemAsset</rdfs:label>
     </owl:Class>
     
 
@@ -3908,7 +4080,32 @@
                 <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#IoTDevice"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <terms:isPartOf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TraditionalApplication</terms:isPartOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TamperingDeviceSetting</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitigated</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Threat -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Threat">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#exploits"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Vulnerability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#targets"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#SystemAsset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A threat is an incident initiated by a threat agent using an attack method to target one or more IS assets by exploiting their vulnerabilities.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Threat</rdfs:label>
     </owl:Class>
     
 
@@ -4106,6 +4303,29 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VotingBasedConsensus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Vulnerability -->
+
+    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Vulnerability">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#characteristicOf"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#SystemAsset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#negates"/>
+                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#SecurityCriteria"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010"/>
+        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A vulnerability is the characteristic of an IS asset or group of IS assets that exposes a weakness or flaw in terms of security.</rdfs:comment>
+        <rdfs:label>Vulnerability</rdfs:label>
     </owl:Class>
     
 
@@ -4342,186 +4562,6 @@
     
 
 
-    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Asset -->
-
-    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Asset">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#isHarmedBy"/>
-                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Vulnerability"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Threat"/>
-        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Vulnerability"/>
-        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010"/>
-        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asset are valuable and plays a role accomplishing the organization’s objectives. Assets are classified as system and business assets.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asset</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Availability -->
-
-    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Availability">
-        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#SecurityCriteria"/>
-        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010"/>
-        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The information and services are available to authorized users when needed.</rdfs:comment>
-        <rdfs:label>Availability</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#BusinessAsset -->
-
-    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#BusinessAsset">
-        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Asset"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#hasConstraint"/>
-                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#SecurityCriteria"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Threat"/>
-        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Vulnerability"/>
-        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010"/>
-        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business assets describe the information, processes, capabilities and skills essential to the business and its core mission.</rdfs:comment>
-        <rdfs:label>BusinessAsset</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Confidentiality -->
-
-    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Confidentiality">
-        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#SecurityCriteria"/>
-        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010"/>
-        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The data is only available to authorized users.</rdfs:comment>
-        <rdfs:label>Confidentiality</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Countermeasure -->
-
-    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Countermeasure">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#mitigates"/>
-                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Vulnerability"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#SecurityCriteria"/>
-        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Threat"/>
-        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Vulnerability"/>
-        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010"/>
-        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Countermeasures are controls to improve the security of the system. Countermeasure can be processes, policies, devices, practices or other actions or components of the information system and its organisation that act to reduce risks.</rdfs:comment>
-        <rdfs:label>Countermeasure</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Integrity -->
-
-    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Integrity">
-        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#SecurityCriteria"/>
-        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010"/>
-        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Integrity refers to the certainty that the data is not tampered with during or after the submission.</rdfs:comment>
-        <rdfs:label>Integrity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#SecurityCriteria -->
-
-    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SecurityCriteria">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#constraintOf"/>
-                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#BusinessAsset"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Threat"/>
-        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010"/>
-        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Security criteria is a constraint on business assets and characterize a security need which are expressed as confidentiality, integrity and availability of business assets.</rdfs:comment>
-        <rdfs:label>SecurityCriteria</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#SystemAsset -->
-
-    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#SystemAsset">
-        <rdfs:subClassOf rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Asset"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#supports"/>
-                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#BusinessAsset"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Threat"/>
-        <owl:disjointWith rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Vulnerability"/>
-        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010"/>
-        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Systems assets are the component or part of an information system, valuable to the organization since it supports business assets.</rdfs:comment>
-        <rdfs:label>SystemAsset</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Threat -->
-
-    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Threat">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#exploits"/>
-                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Vulnerability"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#targets"/>
-                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#SystemAsset"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010"/>
-        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A threat is an incident initiated by a threat agent using an attack method to target one or more IS assets by exploiting their vulnerabilities.</rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Threat</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Vulnerability -->
-
-    <owl:Class rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Vulnerability">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#characteristicOf"/>
-                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#SystemAsset"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#negates"/>
-                <owl:someValuesFrom rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#SecurityCriteria"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010"/>
-        <dc:isReferencedBy rdf:resource="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A vulnerability is the characteristic of an IS asset or group of IS assets that exposes a weakness or flaw in terms of security.</rdfs:comment>
-        <rdfs:label>Vulnerability</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -4536,7 +4576,7 @@
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Dublin_core -->
 
     <owl:NamedIndividual rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Dublin_core">
-        <Link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.dublincore.org/specifications/dublin-core/dcmi-terms</Link>
+        <HealthOnt:Link rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://www.dublincore.org/specifications/dublin-core/dcmi-terms</HealthOnt:Link>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specification of all metadata terms maintained by the Dublin Core Metadata Initiative.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dublin core</rdfs:label>
     </owl:NamedIndividual>
@@ -4546,13 +4586,13 @@
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010 -->
 
     <owl:NamedIndividual rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Dubois2010">
-        <Authors rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Éric Dubois, Patrick Heymans, Nicolas Mayer, Raimundas Matulevičius</Authors>
-        <DOI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-12544-7_16</DOI>
-        <Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#string">289-306</Pages>
-        <Publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Springer Berlin Heidelberg</Publisher>
-        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Systematic Approach to Define the Domain of Information System Security Risk Management</Title>
-        <Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book chapter</Type>
-        <Year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2010</Year>
+        <HealthOnt:Authors rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Éric Dubois, Patrick Heymans, Nicolas Mayer, Raimundas Matulevičius</HealthOnt:Authors>
+        <HealthOnt:DOI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-642-12544-7_16</HealthOnt:DOI>
+        <HealthOnt:Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#string">289-306</HealthOnt:Pages>
+        <HealthOnt:Publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Springer Berlin Heidelberg</HealthOnt:Publisher>
+        <HealthOnt:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Systematic Approach to Define the Domain of Information System Security Risk Management</HealthOnt:Title>
+        <HealthOnt:Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book chapter</HealthOnt:Type>
+        <HealthOnt:Year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2010</HealthOnt:Year>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Systematic Approach to Define the Domain of Information System Security Risk Management</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reference</rdfs:seeAlso>
     </owl:NamedIndividual>
@@ -4562,13 +4602,13 @@
     <!-- https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017 -->
 
     <owl:NamedIndividual rdf:about="https://mmisw.org/ont/~mubashar/HealthOnt#Matulevicius2017">
-        <Authors rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raimundas Matulevičius</Authors>
-        <DOI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-319-61717-6</DOI>
-        <Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#string">218</Pages>
-        <Publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Springer International Publishing</Publisher>
-        <Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fundamentals of Secure System Modelling</Title>
-        <Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book</Type>
-        <Year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2017</Year>
+        <HealthOnt:Authors rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raimundas Matulevičius</HealthOnt:Authors>
+        <HealthOnt:DOI rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://doi.org/10.1007/978-3-319-61717-6</HealthOnt:DOI>
+        <HealthOnt:Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#string">218</HealthOnt:Pages>
+        <HealthOnt:Publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Springer International Publishing</HealthOnt:Publisher>
+        <HealthOnt:Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fundamentals of Secure System Modelling</HealthOnt:Title>
+        <HealthOnt:Type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book</HealthOnt:Type>
+        <HealthOnt:Year rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2017</HealthOnt:Year>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fundamentals of Secure System Modelling</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reference</rdfs:seeAlso>
     </owl:NamedIndividual>
