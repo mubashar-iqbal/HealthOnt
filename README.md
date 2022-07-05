@@ -1,5 +1,4 @@
-# Permissionless Blockchain-based Healthcare Security Ontology
-
+# Permissionless Blockchains-based Healthcare Security Ontology
 OWL-DL, and permissionless blockchains based healthcare security ontology, HealthOnt. The HealthOnt models the system and business assets, security criteria, threats, vulnerabilities, countermeasures, and their relationships by extending the ULRO (https://mmisw.org/ont/~mubashar/ULRO). The HealthOnt gives reasoning in natural language about the encoded concepts of healthcare application's information security, and answers the competence questions such as: What assets to secure? Which system asset supports business assets? Which particular threat exploits which vulnerability? Which permisionless blockchain-based countermeasure mitigates which vulnerability? What threats and vulnerabilities may appear in blockchain-based healthcare applications? and What are the countermeasures to mitigate the vulnerabilities? HealthOnt is published in the journal paper: [Ontological Representation of Healthcare Application Security Using Blockchain Technology](https://doi.org/10.15388/22-INFOR486).
 
 ## SPARQL queries
