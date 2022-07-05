@@ -1,6 +1,6 @@
 # Permissionless Blockchain-based Healthcare Security Ontology
 
-OWL-DL, and permissionless blockchains based healthcare security ontology, HealthOnt. The HealthOnt models the system and business assets, security criteria, threats, vulnerabilities, countermeasures, and their relationships by extending the ULRO (https://mmisw.org/ont/~mubashar/ULRO). The HealthOnt gives reasoning in natural language about the encoded concepts of healthcare application's information security, and answers the competence questions such as: What assets to secure? Which system asset supports business assets? Which particular threat exploits which vulnerability? Which permisionless blockchain-based countermeasure mitigates which vulnerability? What threats and vulnerabilities may appear in blockchain-based healthcare applications? and What are the countermeasures to mitigate the vulnerabilities?
+OWL-DL, and permissionless blockchains based healthcare security ontology, HealthOnt. The HealthOnt models the system and business assets, security criteria, threats, vulnerabilities, countermeasures, and their relationships by extending the ULRO (https://mmisw.org/ont/~mubashar/ULRO). The HealthOnt gives reasoning in natural language about the encoded concepts of healthcare application's information security, and answers the competence questions such as: What assets to secure? Which system asset supports business assets? Which particular threat exploits which vulnerability? Which permisionless blockchain-based countermeasure mitigates which vulnerability? What threats and vulnerabilities may appear in blockchain-based healthcare applications? and What are the countermeasures to mitigate the vulnerabilities? HealthOnt is published in the journal paper: [Ontological Representation of Healthcare Application Security Using Blockchain Technology](https://doi.org/10.15388/22-INFOR486).
 
 ## SPARQL queries
 The SPARQL queries can be used to retrieve information from the HealthOnt. The following header code will remain the same for all the queries listed in this section.
@@ -93,9 +93,6 @@ HealthOnt "is-a" based taxonomical structure illustrates the class hierarchies.
 
 ## V1
 HealthOnt version 1 is related to the published paper: [Blockchain as a countermeasure solution for security threats of healthcare applications](https://link.springer.com/chapter/10.1007/978-3-030-85867-4_6)
-
-## V2
-HealthOnt version 2 is related to the published paper: [Ontological Representation of Healthcare Application Security Using Blockchain Technology](https://doi.org/10.15388/22-INFOR486) 
 
 ## How to use?
 Download [Protégé](https://protege.stanford.edu) editor. Load/import [HealthOnt](https://mmisw.org/ont/~mubashar/HealthOnt) in Protégé and navigate to the *Entities* tab to explore the encoded security risk management concepts.
